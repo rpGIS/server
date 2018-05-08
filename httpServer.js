@@ -175,32 +175,6 @@ res.status(200).send(result.rows);
 });
 });
 });
-
-app.post('/uploadAnswer',function(req,res){
-  // note that we are using POST here as we are uploading data
-  // so the parameters form part of the BODY of the request rather than the RESTful API
-console.dir(req.body);
-pool.connect(function(err,client,done) {
-  if(err){
-    console.log("not able to get connection "+ err);
-    res.status(400).send(err);
-  }
-
-  //Creates a SQL string for the SQL statement to insert the answer into the database
-  var querystring = "INSERT into answer (question,entered,correct) values ('";
-  querystring = querystring + req.body.question + "','" + req.body.entered+"','" + req.body.correct+"')";
-  console.log(querystring);
-  client.query( querystring,function(err,result) {
-    done();
-    if(err){
-      console.log(err);
-      res.status(400).send(err);
-    }
-
-    res.status(200).send("Uploaded");
-    });
-  });
-});
 	// the / indicates the path that you type into the server - in this case, what happens when you type in:  http://developer.cege.ucl.ac.uk:32560/xxxxx/xxxxx
   app.get('/:name1', function (req, res) {
   // run some server-side code
