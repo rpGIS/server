@@ -25,6 +25,7 @@ phonegap serve
 ```
 # Viewing the app
 go to http://developer.cege.ucl.ac.uk:31286/ to view the app on a browser. To view it on the phone, use the phonegap app and put the same url into the in app browser area.
-You can download the app by scanning the following QR code and downloading the apk file 
+
+You can also download the app by scanning the following QR code and downloading the apk file 
 
 ![alt text](https://github.com/rpGIS/server/blob/master/chart.png)
