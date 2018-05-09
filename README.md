@@ -15,12 +15,12 @@ node httpServer.js &
 ```
 Once you have done this, go to the questions folder and use the phonegap serve command to serve the app to the server. You can use this code to serve up the input form:
 ```
-cd questions
+cd questions/ucesrpg
 phonegap serve
 ```
 And this code to serve the quiz mobile app:
 ```
-cd quiz
+cd quiz/ucesrpg
 phonegap serve
 ```
 # Viewing the app
